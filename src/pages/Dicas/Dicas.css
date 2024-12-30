@@ -1,0 +1,70 @@
+.dicas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 50px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  min-height: 200px;
+}
+
+.card h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #00940c;
+}
+
+.card img {
+  width: 500px;
+  height: 200px;
+  border-radius: 25%;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.card p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: rgba(0, 100, 28, 0.1) 0px 8px 24px,
+    rgba(0, 100, 28, 0.1) 0px 16px 56px, rgba(0, 100, 28, 0.1) 0px 24px 80px;
+  border: 1px solid #00940c;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .dicas-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .card img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+}

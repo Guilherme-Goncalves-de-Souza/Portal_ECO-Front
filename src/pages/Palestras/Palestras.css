@@ -1,0 +1,124 @@
+/* Container geral */
+.container {
+  margin: auto;
+  margin-top: 30px;
+  max-width: 80%;
+  padding: 20px;
+}
+
+/* Título das palestras */
+.palestras-title {
+  font-size: 32px;
+  color: #00d338;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Card da palestra */
+.palestra-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.palestra-card:hover {
+  transform: scale(1.02);
+  box-shadow: rgba(0, 100, 28, 0.1) 0px 8px 24px,
+    rgba(0, 100, 28, 0.1) 0px 16px 56px, rgba(0, 100, 28, 0.1) 0px 24px 80px;
+  border: 1px solid #00940c;
+}
+
+/* Informações da palestra */
+.palestra-info {
+  text-align: left;
+}
+
+.palestra-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.palestra-info p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Botão de inscrição */
+.palestra-action {
+  text-align: right;
+}
+
+.palestra-button {
+  background-color: #005517;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.palestra-button:hover {
+  background-color: rgba(0, 158, 5, 0.792);
+}
+
+/* Media Queries para responsividade */
+
+/* Telas menores que 1024px */
+@media (max-width: 1024px) {
+  .palestras-title {
+    font-size: 28px;
+  }
+
+  .palestra-info h2 {
+    font-size: 22px;
+  }
+
+  .palestra-info p {
+    font-size: 15px;
+  }
+
+  .palestra-button {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+
+
+/* Telas menores que 480px */
+@media (max-width: 768px) {
+  .palestras-title {
+    font-size: 20px;
+  }
+
+  .palestra-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .palestra-info h2 {
+    font-size: 18px;
+  }
+
+  .palestra-info p {
+    font-size: 13px;
+  }
+
+  .palestra-button {
+    font-size: 12px;
+    padding: 6px 14px;
+    width: 100%; /* Botão ocupa toda a largura no mobile */
+    text-align: center;
+  }
+}

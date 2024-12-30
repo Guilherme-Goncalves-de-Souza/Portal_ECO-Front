@@ -1,0 +1,116 @@
+/* Estilo do header */
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 20px;
+  padding: 15px 20px;
+  position: relative;
+}
+
+/* Estilo do logo */
+header .logo img {
+  width: 90px;
+  height: 90px;
+}
+
+/* Estilo do menu */
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header nav li {
+  list-style: none;
+}
+
+/* Links gerais */
+header nav li a {
+  text-decoration: none;
+  color: rgb(39, 39, 39);
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Link ativo */
+header nav li .active-link {
+  background-color: #03b2063a;
+  font-weight: bold;
+}
+
+/* Hover */
+header nav li a:hover {
+  color: #008d05;
+  font-weight: bold;
+}
+
+/* Linha decorativa */
+.line {
+  width: 85%;
+  height: 0.5px;
+  background-color: rgb(39, 39, 39);
+  margin: auto;
+  margin-top: 40px;
+}
+
+/* Menu sanduíche */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle .bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+/* Menu mobile */
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 40px 0;
+  gap: 10px;
+}
+
+.nav-menu.open ul {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Oculta o menu padrão no mobile */
+@media (max-width: 920px) {
+  header nav ul {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu.open ul {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+}
