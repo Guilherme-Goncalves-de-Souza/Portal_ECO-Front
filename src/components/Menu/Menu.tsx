@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Menu.css";
 import { NavLink } from "react-router-dom";
 
-import PORTAL_ECO from "../../../images/PORTAL_ECO.png";
+import icone from "../../../images/icone.png";
 
 function Menu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,7 @@ function Menu() {
       <header>
         <div className="logo">
           <NavLink to="/">
-            <img src={PORTAL_ECO} alt="Logo Portal ECO" />
+            <img src={icone} alt="Logo Portal ECO" />
           </NavLink>
         </div>
 
