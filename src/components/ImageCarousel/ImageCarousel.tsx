@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
-import './ImageCarousel.css';
+import React, { useState, useEffect, useRef } from "react";
+import "./ImageCarousel.css";
 
 // Importe as imagens no topo do arquivo
-import PORTAL_ECO from '../../assets/PORTAL_ECO.png';
-import image1 from '../../assets/image1.jpg';
-import image2 from '../../assets/image2.jpg';
-import image3 from '../../assets/image3.jpg';
-import image4 from '../../assets/image4.jpg';
+import PORTAL_ECO from "../../../images/PORTAL_ECO.png";
+import image1 from "../../../images/image1.jpg";
+import image2 from "../../../images/image2.jpg";
+import image3 from "../../../images/image3.jpg";
+import image4 from "../../../images/image4.jpg";
 
 const ImageCarousel: React.FC = () => {
   const images: string[] = [PORTAL_ECO, image1, image2, image3, image4];
@@ -41,14 +41,12 @@ const ImageCarousel: React.FC = () => {
     };
   }, []);
 
-
-  const handleManualNavigation = (action: 'next' | 'prev') => {
+  const handleManualNavigation = (action: "next" | "prev") => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
 
-
-    if (action === 'next') {
+    if (action === "next") {
       goToNext();
     } else {
       goToPrev();
@@ -67,17 +65,21 @@ const ImageCarousel: React.FC = () => {
           className="carousel-image"
         />
       </div>
-      <button className="prev-btn" onClick={() => handleManualNavigation('prev')}>
+      <button
+        className="prev-btn"
+        onClick={() => handleManualNavigation("prev")}>
         &#9664;
       </button>
-      <button className="next-btn" onClick={() => handleManualNavigation('next')}>
+      <button
+        className="next-btn"
+        onClick={() => handleManualNavigation("next")}>
         &#9654;
       </button>
       <div className="indicators">
         {images.map((_, index) => (
           <button
             key={index}
-            className={`indicator ${index === currentIndex ? 'active' : ''}`}
+            className={`indicator ${index === currentIndex ? "active" : ""}`}
             onClick={() => goToIndex(index)}
           />
         ))}

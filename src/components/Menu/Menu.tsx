@@ -14,7 +14,7 @@ function Menu() {
       <header>
         <div className="logo">
           <NavLink to="/">
-            <img src='../../icone.png' alt="Logo Portal ECO" />
+            <img src="../../../images/icone.png" alt="Logo Portal ECO" />
           </NavLink>
         </div>
 
