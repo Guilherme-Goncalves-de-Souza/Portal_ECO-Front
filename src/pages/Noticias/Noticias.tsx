@@ -16,7 +16,7 @@ const Noticias: React.FC = () => {
     // Buscar as notícias no back-end
     const fetchNoticias = async () => {
       try {
-        const response = await fetch("http://localhost:3001/noticias");
+        const response = await fetch("https://portal-eco-back.onrender.com/noticias");
         const data = await response.json();
 
         if (response.ok) {
